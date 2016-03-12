@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+    {% block title %}
+    <title>Заказ товаров</title>
+    {% endblock title %}
+
+
+
+{% block body %}
+<h1>Добавление заказов</h1>
+
+<form class="form-horizontal form-inline" method="post">
+  {% csrf_token %}
+  <legend>Данные заказчика</legend>
+  {{ form.as_p }}
+  {{ formset.management_form }}
+  <legend>Товары</legend>
+  <div class="items">
+    {% for item_form in formset %}
+      <div id="item-{{ forloop.counter0 }}">
+        {{ item_form.as_p }}
+      </div>
+    {% endfor %}
+  </div>
+    <hr>
+    <h4>Cумма заказа: <span id="total-cost">0</span> рублей</h4>
+  <div class="form-actions">
+     <a href="#" class="btn btn-info add-item">Добавить товар</a>
+      <br>
+     <button type="submit" class="btn btn-primary">Оформить заказ</button>
+   </div>
+ </form>
+{% endblock body %}
+

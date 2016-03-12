@@ -1,0 +1,11 @@
+.add-item{
+    margin-bottom: 10px;
+}
+
+.items>div{
+    margin-bottom: 50px;
+}
+
+.items>div:last-child{
+    margin-bottom: 0;
+}

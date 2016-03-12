@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    {% block title %}
+    <title>Narrow Jumbotron Template for Bootstrap</title>
+      {% endblock title %}
+
+<link rel="stylesheet" href="{{ STATIC_URL }}bootstrap-3.3.2-dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="{{ STATIC_URL }}bootstrap-3.3.2-dist/css/jumbotron-narrow.css" />
+<link rel="stylesheet" href="{{ STATIC_URL }}css/own.css" />
+<script src="{{ STATIC_URL }}js/jquery-2.2.1.min.js" ></script>
+<script src="{{ STATIC_URL }}js/own.js" ></script>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+{% block body %}
+
+{% endblock body %}
+      <footer class="footer">
+        <p>&copy; 2016 Company, Inc.</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+{
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
